@@ -1,4 +1,5 @@
--- :help options
+-- Options for neovim, use :help options for
+-- more information about them
 vim.opt.autoindent = true			-- new lines inherit the indentation of previous lines
 vim.opt.backup = false				-- creates a backup file
 vim.opt.clipboard = "unnamedplus"			-- allow neovim to access the system clipboard

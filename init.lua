@@ -1,2 +1,5 @@
 require "frblo.options"
 require "frblo.keymaps"
+require "frblo.plugins"
+require "frblo.colorscheme"
+-- vim.cmd "colorscheme desert"

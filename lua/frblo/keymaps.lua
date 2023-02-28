@@ -1,3 +1,4 @@
+-- local telescope_builtin = require("telescope_builtin")
 local opts = {noremap = true, silent = true}
 
 local term_opts = {silent = true}
@@ -39,7 +40,7 @@ keymap("n", "<S-h>", ":bprevious<CR>", opts)
 
 -- Insert
 -- Press jk fast to enter
-keymap("i", "<jk>", "<ESC>", opts)
+keymap("i", "kj", "<ESC>", opts)
 
 -- Visual
 -- Stay in indent mode
@@ -65,3 +66,13 @@ keymap("t", "<C-h>", "<C-\\><C-N><C-w>h", term_opts)
 keymap("t", "<C-j>", "<C-\\><C-N><C-w>j", term_opts)
 keymap("t", "<C-k>", "<C-\\><C-N><C-w>k", term_opts)
 keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
+
+-- Telescope
+keymap("n", "<leader>f", "<cmd>Telescope find_files<cr>", opts)
+keymap("n", "<leader>/", "<cmd>Telescope live_grep<cr>", opts)
+keymap("n", "<leader>w", "<cmd>Telescope lsp_workspace_symbols<cr>", opts)
+-- keymap("<leader>f", telescope_builtin.find_files)
+-- keymap("<leader>w", telescope_builtin.lsp_workspace_symbols)
+-- keymap("<leader>/", telescope_builtin.live_grep)
+-- keymap("<leader>tb", telescope_builtin.buffers)
+-- keymap("<leader>tt", telescope_builtin.builtin)

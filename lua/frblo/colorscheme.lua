@@ -1,6 +1,7 @@
 -- local colorscheme = "default"
 -- local set background=dark
-local colorscheme = "gruvbox-material"
+--local colorscheme = "gruvbox-material"
+local colorscheme = "dsekt"
 
 local status_ok, _ = pcall(vim.cmd, "colorscheme " .. colorscheme)
 if not status_ok then

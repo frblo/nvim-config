@@ -48,6 +48,8 @@ return packer.startup(function(use)
 
 	-- Colorscheme
 	use "sainnhe/gruvbox-material"		-- Adjusted gruvbox colorscheme
+--	use {"git@github.com:frblo/dsekt.nvim.git"}
+	use "datasektionen/dsekt.nvim"
 
 	-- Auto completion
 	use "hrsh7th/nvim-cmp"			-- The completion plugin

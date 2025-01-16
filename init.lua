@@ -157,8 +157,12 @@ vim.opt.cursorline = true
 -- Minimal number of screen lines to keep above and below the cursor.
 vim.opt.scrolloff = 10
 
-vim.opt.tabstop = 4
-vim.opt.softtabstop = 4
+-- vim.opt.tabstop = 4
+-- vim.opt.softtabstop = 4
+vim.o.tabstop = 4 -- A TAB character looks like 4 spaces
+vim.o.expandtab = true -- Pressing the TAB key will insert spaces instead of a TAB character
+vim.o.softtabstop = 4 -- Number of spaces inserted instead of a TAB character
+vim.o.shiftwidth = 4 -- Number of spaces inserted when indenting
 
 -- [[ Basic Keymaps ]]
 --  See `:help vim.keymap.set()`
@@ -549,6 +553,9 @@ require("lazy").setup({
 					-- Execute a code action, usually your cursor needs to be on top of an error
 					-- or a suggestion from your LSP for this to activate.
 					map("<leader>ca", vim.lsp.buf.code_action, "[C]ode [A]ction", { "n", "x" })
+
+					-- Open a diagnostic floating window when on top of an annotation
+					map("<leader>cv", "<cmd> lua vim.diagnostic.open_float() <CR>", "[C]ode [A]ction", { "n", "x" })
 
 					-- WARN: This is not Goto Definition, this is Goto Declaration.
 					--  For example, in C this would take you to the header.
